@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="main.css">
+	<title>OMDb template</title>
+</head>
+<body>
+		<h1 id="api-title">Quick Shop</h1>
+		<input type="text" id="search-input" placeholder="Enter your search">
+		<button id="search-button">Search</button>
+		
+		<select name="type" id="type">
+			<label for="type"></label>	
+			<form action="" id="type-form"></form>
+			
+			<!-- Tom value för att inte specificera 'movie' eller 'series' -->
+			<option value="" id="option-type" class="option-type">Type</option>
+
+			<!-- Dessa values 'movie' och 'series' är från omdbs sida och måste vara samma för att kunna targeta -->
+			<option value="movie" id="option-movies">Movies</option> 
+			<option value="series" id="option-series">Series</option>
+			
+		</select>
+
+
+	<!-- </div> -->
+	<div id="main-content"></div>
+	<script src="js/main.js"></script>
+</body>
+</html>
