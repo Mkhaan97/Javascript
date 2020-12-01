@@ -49,13 +49,19 @@ async function fetchData() {
         console.log(data);
         container.innerHTML = "";
         let searchResult = data['Search']
+        console.log(`You searched for ${searchInput.value}`);
 
+
+      if(option.value === 'movie') {
+      container.innerHTML = `<h2>List Of Movies</h2>`
+      }
+      else if(option.value === 'series'){
+        container.innerHTML = `<h2>List of Series</h2>`
+      }
         for (let result in searchResult){
             
-            
-            console.log(`You searched for ${searchInput.value}`);
-           
-            container.innerHTML += `<ul><li> ${searchResult[result].Title} </li></ul>`;
+            container.innerHTML += `<ul><li> ${searchResult[result].Title} </li></ul> <img src=${searchResult[result].Poster}>`;
+          
             
         }
         
